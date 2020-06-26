@@ -1,0 +1,11 @@
+pandoc: '2.5'
+pkgdown: 1.6.1
+pkgdown_sha: ~
+articles:
+  query_tutorial: query_tutorial.html
+  sofa: sofa.html
+last_built: 2021-07-15T13:14Z
+urls:
+  reference: https://docs.ropensci.org/sofa/reference
+  article: https://docs.ropensci.org/sofa/articles
+

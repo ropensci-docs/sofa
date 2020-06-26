@@ -1,0 +1,12 @@
+{
+  "commit": {
+    "commit": "3fef62a77e882270d4deda9bf12d6b9105536212",
+    "author": "Scott Chamberlain <myrmecocystus@gmail.com>",
+    "time": "2020-06-26 14:29:11",
+    "files": 7,
+    "merge": false,
+    "message": "fix non-file package-anchored link for cran checks\n"
+  },
+  "remote": "https://github.com/ropensci/sofa",
+  "pkg": "sofa"
+}
