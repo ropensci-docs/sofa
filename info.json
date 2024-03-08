@@ -1,0 +1,12 @@
+{
+  "commit": {
+    "commit": "6e2302e9703d086f9c30ad33c3b0637c7fc0d660",
+    "author": "Yaoxiang Li <liyaoxiang@outlook.com>",
+    "time": "2024-03-08 04:23:40",
+    "files": 1,
+    "merge": false,
+    "message": "Update README.Rmd\n"
+  },
+  "repo": "https://github.com/ropensci/sofa",
+  "pkg": "sofa"
+}
