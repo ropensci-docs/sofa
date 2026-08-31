@@ -1,0 +1,13 @@
+{
+  "commit": {
+    "commit": "87154db5869d928532aa1b066b363f6ed4be10bf",
+    "author": "Yaoxiang Li <liyaoxiang@outlook.com>",
+    "time": "2026-08-30T23:41:23Z",
+    "files": 2,
+    "merge": false,
+    "message": "Add logo alternative text\n"
+  },
+  "repo": "https://github.com/ropensci/sofa",
+  "pkg": "sofa",
+  "time": "2026-08-31T00:46:10Z"
+}

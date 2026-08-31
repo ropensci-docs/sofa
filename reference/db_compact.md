@@ -1,0 +1,67 @@
+# Request compaction of the specified database
+
+Request compaction of the specified database
+
+## Usage
+
+``` r
+db_compact(cushion, dbname, as = "list", ...)
+```
+
+## Arguments
+
+- cushion:
+
+  A [`Cushion`](https://docs.ropensci.org/sofa/reference/Cushion.md)
+  object. Required.
+
+- dbname:
+
+  Database name. Required.
+
+- as:
+
+  (character) One of list (default) or json
+
+- ...:
+
+  Curl args passed on to
+  [`HttpClient`](https://docs.ropensci.org/crul/reference/HttpClient.html)
+
+## Value
+
+JSON as a character string or a list (determined by the `as` parameter)
+
+## Details
+
+Compaction compresses the disk database file by performing the following
+operations:
+
+- Writes a new, optimised, version of the database file, removing any
+  unused sections from the new version during write. Because a new file
+  is temporarily created for this purpose, you may require up to twice
+  the current storage space of the specified database in order for the
+  compaction routine to complete.
+
+- Removes old revisions of documents from the database, up to the
+  per-database limit specified by the \_revs_limit database parameter.
+
+Compaction can only be requested on an individual database; you cannot
+compact all the databases for a CouchDB instance. The compaction process
+runs as a background process. You can determine if the compaction
+process is operating on a database by obtaining the database meta
+information, the compact_running value of the returned database
+structure will be set to true. See `GET /{db}`. You can also obtain a
+list of running processes to determine whether compaction is currently
+running. See "/\_active_tasks"
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+user <- Sys.getenv("COUCHDB_TEST_USER")
+pwd <- Sys.getenv("COUCHDB_TEST_PWD")
+(x <- Cushion$new(user = user, pwd = pwd))
+# db_compact(x, dbname = "iris")
+} # }
+```
